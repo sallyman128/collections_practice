@@ -50,7 +50,7 @@ def sum_array(array_int)
 end
 
 def add_s(array)
-  array.each_with_index.collect do |string, index|
+  array.each_with_index.collect do |string, index| 
     skip if index == 1
     string << "s"
   end
