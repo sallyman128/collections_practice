@@ -50,8 +50,12 @@ def sum_array(array_int)
 end
 
 def add_s(array)
-  array.each_with_index.collect do |string, index| 
-    skip if index == 1
-    string << "s"
+  collection = []
+
+  array.each_with_index do |string, index|
+    collection << string + "s" if index != 1
+    collection << string if index == 1
   end
+
+  collection
 end
